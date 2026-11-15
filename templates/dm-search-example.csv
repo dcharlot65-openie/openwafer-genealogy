@@ -1,0 +1,4 @@
+
+id,chip_number_id,chip_owner_id,PlasmaEtch_step_time,PlasmaEtch_o2_flow,PlasmaEtch_sf6_flow,PlasmaEtch_rf_power,PlasmaEtch_etch_duration,PlasmaEtch_etch_depth,picture,content_type,PlasmaEtch_notes,process
+3,412,9,2025-03-01T14:00:00+00:00,5,20,100,60,350,,,SYNTHETIC example in the portal export format,PlasmaEtch
+4,413,9,2025-03-01T14:30:00+00:00,5,20,100,90,520,,,,PlasmaEtch

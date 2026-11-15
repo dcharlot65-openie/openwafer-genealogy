@@ -1,0 +1,301 @@
+"_row","_parent","_idx","code","name","pass"
+0,0,0,1,"pass",true
+1,0,1,2,"parametric fail (CD outside the electrical window)",false
+2,0,2,3,"functional fail (killer defect)",false
+3,1,0,1,"pass",true
+4,1,1,2,"parametric fail (CD outside the electrical window)",false
+5,1,2,3,"functional fail (killer defect)",false
+6,2,0,1,"pass",true
+7,2,1,2,"parametric fail (CD outside the electrical window)",false
+8,2,2,3,"functional fail (killer defect)",false
+9,3,0,1,"pass",true
+10,3,1,2,"parametric fail (CD outside the electrical window)",false
+11,3,2,3,"functional fail (killer defect)",false
+12,4,0,1,"pass",true
+13,4,1,2,"parametric fail (CD outside the electrical window)",false
+14,4,2,3,"functional fail (killer defect)",false
+15,5,0,1,"pass",true
+16,5,1,2,"parametric fail (CD outside the electrical window)",false
+17,5,2,3,"functional fail (killer defect)",false
+18,6,0,1,"pass",true
+19,6,1,2,"parametric fail (CD outside the electrical window)",false
+20,6,2,3,"functional fail (killer defect)",false
+21,7,0,1,"pass",true
+22,7,1,2,"parametric fail (CD outside the electrical window)",false
+23,7,2,3,"functional fail (killer defect)",false
+24,8,0,1,"pass",true
+25,8,1,2,"parametric fail (CD outside the electrical window)",false
+26,8,2,3,"functional fail (killer defect)",false
+27,9,0,1,"pass",true
+28,9,1,2,"parametric fail (CD outside the electrical window)",false
+29,9,2,3,"functional fail (killer defect)",false
+30,10,0,1,"pass",true
+31,10,1,2,"parametric fail (CD outside the electrical window)",false
+32,10,2,3,"functional fail (killer defect)",false
+33,11,0,1,"pass",true
+34,11,1,2,"parametric fail (CD outside the electrical window)",false
+35,11,2,3,"functional fail (killer defect)",false
+36,12,0,1,"pass",true
+37,12,1,2,"parametric fail (CD outside the electrical window)",false
+38,12,2,3,"functional fail (killer defect)",false
+39,13,0,1,"pass",true
+40,13,1,2,"parametric fail (CD outside the electrical window)",false
+41,13,2,3,"functional fail (killer defect)",false
+42,14,0,1,"pass",true
+43,14,1,2,"parametric fail (CD outside the electrical window)",false
+44,14,2,3,"functional fail (killer defect)",false
+45,15,0,1,"pass",true
+46,15,1,2,"parametric fail (CD outside the electrical window)",false
+47,15,2,3,"functional fail (killer defect)",false
+48,16,0,1,"pass",true
+49,16,1,2,"parametric fail (CD outside the electrical window)",false
+50,16,2,3,"functional fail (killer defect)",false
+51,17,0,1,"pass",true
+52,17,1,2,"parametric fail (CD outside the electrical window)",false
+53,17,2,3,"functional fail (killer defect)",false
+54,18,0,1,"pass",true
+55,18,1,2,"parametric fail (CD outside the electrical window)",false
+56,18,2,3,"functional fail (killer defect)",false
+57,19,0,1,"pass",true
+58,19,1,2,"parametric fail (CD outside the electrical window)",false
+59,19,2,3,"functional fail (killer defect)",false
+60,20,0,1,"pass",true
+61,20,1,2,"parametric fail (CD outside the electrical window)",false
+62,20,2,3,"functional fail (killer defect)",false
+63,21,0,1,"pass",true
+64,21,1,2,"parametric fail (CD outside the electrical window)",false
+65,21,2,3,"functional fail (killer defect)",false
+66,22,0,1,"pass",true
+67,22,1,2,"parametric fail (CD outside the electrical window)",false
+68,22,2,3,"functional fail (killer defect)",false
+69,23,0,1,"pass",true
+70,23,1,2,"parametric fail (CD outside the electrical window)",false
+71,23,2,3,"functional fail (killer defect)",false
+72,24,0,1,"pass",true
+73,24,1,2,"parametric fail (CD outside the electrical window)",false
+74,24,2,3,"functional fail (killer defect)",false
+75,25,0,1,"pass",true
+76,25,1,2,"parametric fail (CD outside the electrical window)",false
+77,25,2,3,"functional fail (killer defect)",false
+78,26,0,1,"pass",true
+79,26,1,2,"parametric fail (CD outside the electrical window)",false
+80,26,2,3,"functional fail (killer defect)",false
+81,27,0,1,"pass",true
+82,27,1,2,"parametric fail (CD outside the electrical window)",false
+83,27,2,3,"functional fail (killer defect)",false
+84,28,0,1,"pass",true
+85,28,1,2,"parametric fail (CD outside the electrical window)",false
+86,28,2,3,"functional fail (killer defect)",false
+87,29,0,1,"pass",true
+88,29,1,2,"parametric fail (CD outside the electrical window)",false
+89,29,2,3,"functional fail (killer defect)",false
+90,30,0,1,"pass",true
+91,30,1,2,"parametric fail (CD outside the electrical window)",false
+92,30,2,3,"functional fail (killer defect)",false
+93,31,0,1,"pass",true
+94,31,1,2,"parametric fail (CD outside the electrical window)",false
+95,31,2,3,"functional fail (killer defect)",false
+96,32,0,1,"pass",true
+97,32,1,2,"parametric fail (CD outside the electrical window)",false
+98,32,2,3,"functional fail (killer defect)",false
+99,33,0,1,"pass",true
+100,33,1,2,"parametric fail (CD outside the electrical window)",false
+101,33,2,3,"functional fail (killer defect)",false
+102,34,0,1,"pass",true
+103,34,1,2,"parametric fail (CD outside the electrical window)",false
+104,34,2,3,"functional fail (killer defect)",false
+105,35,0,1,"pass",true
+106,35,1,2,"parametric fail (CD outside the electrical window)",false
+107,35,2,3,"functional fail (killer defect)",false
+108,36,0,1,"pass",true
+109,36,1,2,"parametric fail (CD outside the electrical window)",false
+110,36,2,3,"functional fail (killer defect)",false
+111,37,0,1,"pass",true
+112,37,1,2,"parametric fail (CD outside the electrical window)",false
+113,37,2,3,"functional fail (killer defect)",false
+114,38,0,1,"pass",true
+115,38,1,2,"parametric fail (CD outside the electrical window)",false
+116,38,2,3,"functional fail (killer defect)",false
+117,39,0,1,"pass",true
+118,39,1,2,"parametric fail (CD outside the electrical window)",false
+119,39,2,3,"functional fail (killer defect)",false
+120,40,0,1,"pass",true
+121,40,1,2,"parametric fail (CD outside the electrical window)",false
+122,40,2,3,"functional fail (killer defect)",false
+123,41,0,1,"pass",true
+124,41,1,2,"parametric fail (CD outside the electrical window)",false
+125,41,2,3,"functional fail (killer defect)",false
+126,42,0,1,"pass",true
+127,42,1,2,"parametric fail (CD outside the electrical window)",false
+128,42,2,3,"functional fail (killer defect)",false
+129,43,0,1,"pass",true
+130,43,1,2,"parametric fail (CD outside the electrical window)",false
+131,43,2,3,"functional fail (killer defect)",false
+132,44,0,1,"pass",true
+133,44,1,2,"parametric fail (CD outside the electrical window)",false
+134,44,2,3,"functional fail (killer defect)",false
+135,45,0,1,"pass",true
+136,45,1,2,"parametric fail (CD outside the electrical window)",false
+137,45,2,3,"functional fail (killer defect)",false
+138,46,0,1,"pass",true
+139,46,1,2,"parametric fail (CD outside the electrical window)",false
+140,46,2,3,"functional fail (killer defect)",false
+141,47,0,1,"pass",true
+142,47,1,2,"parametric fail (CD outside the electrical window)",false
+143,47,2,3,"functional fail (killer defect)",false
+144,48,0,1,"pass",true
+145,48,1,2,"parametric fail (CD outside the electrical window)",false
+146,48,2,3,"functional fail (killer defect)",false
+147,49,0,1,"pass",true
+148,49,1,2,"parametric fail (CD outside the electrical window)",false
+149,49,2,3,"functional fail (killer defect)",false
+150,50,0,1,"pass",true
+151,50,1,2,"parametric fail (CD outside the electrical window)",false
+152,50,2,3,"functional fail (killer defect)",false
+153,51,0,1,"pass",true
+154,51,1,2,"parametric fail (CD outside the electrical window)",false
+155,51,2,3,"functional fail (killer defect)",false
+156,52,0,1,"pass",true
+157,52,1,2,"parametric fail (CD outside the electrical window)",false
+158,52,2,3,"functional fail (killer defect)",false
+159,53,0,1,"pass",true
+160,53,1,2,"parametric fail (CD outside the electrical window)",false
+161,53,2,3,"functional fail (killer defect)",false
+162,54,0,1,"pass",true
+163,54,1,2,"parametric fail (CD outside the electrical window)",false
+164,54,2,3,"functional fail (killer defect)",false
+165,55,0,1,"pass",true
+166,55,1,2,"parametric fail (CD outside the electrical window)",false
+167,55,2,3,"functional fail (killer defect)",false
+168,56,0,1,"pass",true
+169,56,1,2,"parametric fail (CD outside the electrical window)",false
+170,56,2,3,"functional fail (killer defect)",false
+171,57,0,1,"pass",true
+172,57,1,2,"parametric fail (CD outside the electrical window)",false
+173,57,2,3,"functional fail (killer defect)",false
+174,58,0,1,"pass",true
+175,58,1,2,"parametric fail (CD outside the electrical window)",false
+176,58,2,3,"functional fail (killer defect)",false
+177,59,0,1,"pass",true
+178,59,1,2,"parametric fail (CD outside the electrical window)",false
+179,59,2,3,"functional fail (killer defect)",false
+180,60,0,1,"pass",true
+181,60,1,2,"parametric fail (CD outside the electrical window)",false
+182,60,2,3,"functional fail (killer defect)",false
+183,61,0,1,"pass",true
+184,61,1,2,"parametric fail (CD outside the electrical window)",false
+185,61,2,3,"functional fail (killer defect)",false
+186,62,0,1,"pass",true
+187,62,1,2,"parametric fail (CD outside the electrical window)",false
+188,62,2,3,"functional fail (killer defect)",false
+189,63,0,1,"pass",true
+190,63,1,2,"parametric fail (CD outside the electrical window)",false
+191,63,2,3,"functional fail (killer defect)",false
+192,64,0,1,"pass",true
+193,64,1,2,"parametric fail (CD outside the electrical window)",false
+194,64,2,3,"functional fail (killer defect)",false
+195,65,0,1,"pass",true
+196,65,1,2,"parametric fail (CD outside the electrical window)",false
+197,65,2,3,"functional fail (killer defect)",false
+198,66,0,1,"pass",true
+199,66,1,2,"parametric fail (CD outside the electrical window)",false
+200,66,2,3,"functional fail (killer defect)",false
+201,67,0,1,"pass",true
+202,67,1,2,"parametric fail (CD outside the electrical window)",false
+203,67,2,3,"functional fail (killer defect)",false
+204,68,0,1,"pass",true
+205,68,1,2,"parametric fail (CD outside the electrical window)",false
+206,68,2,3,"functional fail (killer defect)",false
+207,69,0,1,"pass",true
+208,69,1,2,"parametric fail (CD outside the electrical window)",false
+209,69,2,3,"functional fail (killer defect)",false
+210,70,0,1,"pass",true
+211,70,1,2,"parametric fail (CD outside the electrical window)",false
+212,70,2,3,"functional fail (killer defect)",false
+213,71,0,1,"pass",true
+214,71,1,2,"parametric fail (CD outside the electrical window)",false
+215,71,2,3,"functional fail (killer defect)",false
+216,72,0,1,"pass",true
+217,72,1,2,"parametric fail (CD outside the electrical window)",false
+218,72,2,3,"functional fail (killer defect)",false
+219,73,0,1,"pass",true
+220,73,1,2,"parametric fail (CD outside the electrical window)",false
+221,73,2,3,"functional fail (killer defect)",false
+222,74,0,1,"pass",true
+223,74,1,2,"parametric fail (CD outside the electrical window)",false
+224,74,2,3,"functional fail (killer defect)",false
+225,75,0,1,"pass",true
+226,75,1,2,"parametric fail (CD outside the electrical window)",false
+227,75,2,3,"functional fail (killer defect)",false
+228,76,0,1,"pass",true
+229,76,1,2,"parametric fail (CD outside the electrical window)",false
+230,76,2,3,"functional fail (killer defect)",false
+231,77,0,1,"pass",true
+232,77,1,2,"parametric fail (CD outside the electrical window)",false
+233,77,2,3,"functional fail (killer defect)",false
+234,78,0,1,"pass",true
+235,78,1,2,"parametric fail (CD outside the electrical window)",false
+236,78,2,3,"functional fail (killer defect)",false
+237,79,0,1,"pass",true
+238,79,1,2,"parametric fail (CD outside the electrical window)",false
+239,79,2,3,"functional fail (killer defect)",false
+240,80,0,1,"pass",true
+241,80,1,2,"parametric fail (CD outside the electrical window)",false
+242,80,2,3,"functional fail (killer defect)",false
+243,81,0,1,"pass",true
+244,81,1,2,"parametric fail (CD outside the electrical window)",false
+245,81,2,3,"functional fail (killer defect)",false
+246,82,0,1,"pass",true
+247,82,1,2,"parametric fail (CD outside the electrical window)",false
+248,82,2,3,"functional fail (killer defect)",false
+249,83,0,1,"pass",true
+250,83,1,2,"parametric fail (CD outside the electrical window)",false
+251,83,2,3,"functional fail (killer defect)",false
+252,84,0,1,"pass",true
+253,84,1,2,"parametric fail (CD outside the electrical window)",false
+254,84,2,3,"functional fail (killer defect)",false
+255,85,0,1,"pass",true
+256,85,1,2,"parametric fail (CD outside the electrical window)",false
+257,85,2,3,"functional fail (killer defect)",false
+258,86,0,1,"pass",true
+259,86,1,2,"parametric fail (CD outside the electrical window)",false
+260,86,2,3,"functional fail (killer defect)",false
+261,87,0,1,"pass",true
+262,87,1,2,"parametric fail (CD outside the electrical window)",false
+263,87,2,3,"functional fail (killer defect)",false
+264,88,0,1,"pass",true
+265,88,1,2,"parametric fail (CD outside the electrical window)",false
+266,88,2,3,"functional fail (killer defect)",false
+267,89,0,1,"pass",true
+268,89,1,2,"parametric fail (CD outside the electrical window)",false
+269,89,2,3,"functional fail (killer defect)",false
+270,90,0,1,"pass",true
+271,90,1,2,"parametric fail (CD outside the electrical window)",false
+272,90,2,3,"functional fail (killer defect)",false
+273,91,0,1,"pass",true
+274,91,1,2,"parametric fail (CD outside the electrical window)",false
+275,91,2,3,"functional fail (killer defect)",false
+276,92,0,1,"pass",true
+277,92,1,2,"parametric fail (CD outside the electrical window)",false
+278,92,2,3,"functional fail (killer defect)",false
+279,93,0,1,"pass",true
+280,93,1,2,"parametric fail (CD outside the electrical window)",false
+281,93,2,3,"functional fail (killer defect)",false
+282,94,0,1,"pass",true
+283,94,1,2,"parametric fail (CD outside the electrical window)",false
+284,94,2,3,"functional fail (killer defect)",false
+285,95,0,1,"pass",true
+286,95,1,2,"parametric fail (CD outside the electrical window)",false
+287,95,2,3,"functional fail (killer defect)",false
+288,96,0,1,"pass",true
+289,96,1,2,"parametric fail (CD outside the electrical window)",false
+290,96,2,3,"functional fail (killer defect)",false
+291,97,0,1,"pass",true
+292,97,1,2,"parametric fail (CD outside the electrical window)",false
+293,97,2,3,"functional fail (killer defect)",false
+294,98,0,1,"pass",true
+295,98,1,2,"parametric fail (CD outside the electrical window)",false
+296,98,2,3,"functional fail (killer defect)",false
+297,99,0,1,"pass",true
+298,99,1,2,"parametric fail (CD outside the electrical window)",false
+299,99,2,3,"functional fail (killer defect)",false

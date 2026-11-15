@@ -1,0 +1,11 @@
+"_row","_parent","_idx","value.uncertainty.basis","value.uncertainty.kind","value.uncertainty.u","value.unit","value.value","value.uncertainty.reason"
+0,0,0,"type A: s.d. 1.8 nm over 5 measurements / sqrt(5)","standard",0.805,"nm",47.2,
+1,1,0,,"unknown",,"nm",15.1,"single XRR measurement; no fit uncertainty reported"
+2,2,0,,"unknown",,"nm",74.8,"single XRR measurement; no fit uncertainty reported"
+3,3,0,,"unknown",,"nm",0.139,"not reported"
+4,4,0,,"unknown",,"nm",5.74,"not reported"
+5,5,0,,"unknown",,"nm",2.782,"not reported"
+6,6,0,,"unknown",,"nm",2.044,"not reported"
+7,7,0,,"unknown",,"nm",19.833,"not reported"
+8,8,0,,"unknown",,"nm",13.099,"not reported"
+9,9,0,,"unknown",,"nm",0.768,"not reported"

@@ -1,0 +1,44 @@
+"_row","_parent","_idx","value.uncertainty.basis","value.uncertainty.kind","value.uncertainty.u","value.unit","value.value","value.derivation.inputs#len","value.derivation.method"
+0,0,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.12494241207094,,
+1,1,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.133896801609794,,
+2,2,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.4488782544301,,
+3,3,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",44.65093627956654,,
+4,4,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",44.47889989179476,,
+5,5,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.38472708229967,,
+6,6,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",44.57631668323585,,
+7,7,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.3747338143148,,
+8,8,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",44.484629746022364,,
+9,9,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.45222964479943,,
+10,10,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",43.960357147785295,,
+11,11,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",44.868656786844156,,
+12,12,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",44.60993769931432,,
+13,13,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.50549514719844,,
+14,14,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",39.954845190822596,,
+15,15,0,"the model's prediction s.d.","standard",1.6290806377688554,"nm",42.10795325641194,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+16,16,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.241638360186606,,
+17,17,0,"the model's prediction s.d.","standard",0.3176600082428488,"nm",44.92878988678319,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+18,18,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",40.50294189101141,,
+19,19,0,"the model's prediction s.d.","standard",0.3580027410510423,"nm",45.13855387239829,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+20,20,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.06990489988188,,
+21,21,0,"the model's prediction s.d.","standard",0.31470437973307896,"nm",45.11764154292338,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+22,22,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",41.08139376224848,,
+23,23,0,"the model's prediction s.d.","standard",0.31346172225806535,"nm",44.905608543297355,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+24,24,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.58773663666576,,
+25,25,0,"the model's prediction s.d.","standard",0.29237605618556134,"nm",45.445025428281994,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+26,26,0,"the model's prediction s.d.","standard",0.33921795377553454,"nm",45.26426149819997,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+27,27,0,"the model's prediction s.d.","standard",0.31263075590078104,"nm",45.15405165612383,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+28,28,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",41.652041006975665,,
+29,29,0,"the model's prediction s.d.","standard",1.5979225610160819,"nm",41.22342326451901,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+30,30,0,"the model's prediction s.d.","standard",1.7949974799697896,"nm",41.29327096613099,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+31,31,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",42.1411537880295,,
+32,32,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",44.88470144403941,,
+33,33,0,"the model's prediction s.d.","standard",0.2780739766950003,"nm",45.04340956459396,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+34,34,0,"the model's prediction s.d.","standard",0.28076791916751975,"nm",44.9251194880754,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+35,35,0,"the model's prediction s.d.","standard",0.2848265782262002,"nm",45.176109425676756,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+36,36,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.74149547447334,,
+37,37,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",43.33017246009505,,
+38,38,0,"the model's prediction s.d.","standard",1.4835308909054252,"nm",40.84578008575368,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+39,39,0,"the model's prediction s.d.","standard",0.37862510793438536,"nm",45.395302686612446,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+40,40,0,"the model's prediction s.d.","standard",0.32759040987607485,"nm",45.20937754828157,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+41,41,0,"the model's prediction s.d.","standard",0.3617576149180472,"nm",44.88775000114332,4,"ridge regression on trace features [u, u·mean(OES), mean(bias), mean(pressure), mean(temperature)] with leverage refusal (ofpga-metro::vm), advisory"
+42,42,0,"simulated metrology noise s.d. (Plant::metrology_sd)","standard",0.1,"nm",45.37558175788039,,

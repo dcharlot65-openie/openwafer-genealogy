@@ -1,0 +1,12 @@
+Step #,Step Name,Tool Name,Parameters,Comments
+1,Bake,,"Bake Temperature: 100 °C
+Bake Time: 60 secs",
+2,Spin Resist,,"Resist: AZ P4210
+Spin Speed: 4000 rpm
+Spin Time: 30 secs",
+3,Sputter,CMU Hacker Fab RF Sputtering Chamber,"Material: Al
+Film thickness: 150 nm
+Deposition Rate: 2.5 nm/min
+Deposition Time: 60 mins
+RF or DC Power: 100 Watts
+Chamber Pressure: 3E-3 Torr",Example rows; replace with your own.

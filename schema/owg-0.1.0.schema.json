@@ -1,0 +1,2183 @@
+{
+  "$defs": {
+    "Attribute": {
+      "description": "A categorical value: a chemical, a resist name, a yes/no.",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "type": "object"
+    },
+    "Axis": {
+      "description": "One axis of a measured curve.",
+      "properties": {
+        "derivation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Derivation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Present when the axis was computed, not read: drain current from a series-resistor voltage."
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuantityKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "name": {
+          "type": "string"
+        },
+        "unit": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "values": {
+          "default": [],
+          "items": {
+            "format": "double",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "Bias": {
+      "description": "The bias on one terminal during a test.",
+      "properties": {
+        "mode": {
+          "$ref": "#/$defs/BiasMode"
+        },
+        "terminal": {
+          "description": "\"gate\", \"drain\", \"source\", \"body\", \"force+\", \"sense-\".",
+          "type": "string"
+        }
+      },
+      "required": [
+        "terminal",
+        "mode"
+      ],
+      "type": "object"
+    },
+    "BiasMode": {
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "const": "fixed",
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/Quantity"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "start": {
+              "$ref": "#/$defs/Quantity"
+            },
+            "step": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Quantity"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "stop": {
+              "$ref": "#/$defs/Quantity"
+            },
+            "type": {
+              "const": "sweep",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "start",
+            "stop"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "BinDef": {
+      "description": "One bin code of a bin map.",
+      "properties": {
+        "code": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pass": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "pass"
+      ],
+      "type": "object"
+    },
+    "BinMap": {
+      "description": "A wafer's sort result, after SEMI E142's bin map.",
+      "properties": {
+        "after_run": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bin_defs": {
+          "items": {
+            "$ref": "#/$defs/BinDef"
+          },
+          "type": "array"
+        },
+        "dies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DieBin"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "material": {
+          "type": "string"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "material",
+        "bin_defs"
+      ],
+      "type": "object"
+    },
+    "CalStatus": {
+      "oneOf": [
+        {
+          "const": "calibrated",
+          "description": "Calibrated on `date` against `reference`.",
+          "type": "string"
+        },
+        {
+          "const": "unknown",
+          "description": "Never calibrated, or no record of it. Stated, not omitted.",
+          "type": "string"
+        },
+        {
+          "const": "not_applicable",
+          "description": "A simulated sensor or a counter that has nothing to calibrate.",
+          "type": "string"
+        }
+      ]
+    },
+    "Calibration": {
+      "properties": {
+        "date": {
+          "default": null,
+          "description": "`YYYY-MM-DD`; required when `status` is `calibrated`.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "$ref": "#/$defs/CalStatus"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "type": "object"
+    },
+    "Curve": {
+      "description": "A raw curve: y against x at fixed other biases.",
+      "properties": {
+        "fixed": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Uncertainty"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "x": {
+          "$ref": "#/$defs/Axis"
+        },
+        "y": {
+          "$ref": "#/$defs/Axis"
+        }
+      },
+      "required": [
+        "name",
+        "x",
+        "y"
+      ],
+      "type": "object"
+    },
+    "DeclaredOrigin": {
+      "description": "What a whole dataset claims to contain.",
+      "oneOf": [
+        {
+          "const": "MEASURED",
+          "description": "Real fab records: MEASURED and SPECIFIED only. A SIMULATED record is an error.",
+          "type": "string"
+        },
+        {
+          "const": "SIMULATED",
+          "description": "Simulation output: SIMULATED and SPECIFIED only. A MEASURED record is an error.",
+          "type": "string"
+        },
+        {
+          "const": "MIXED",
+          "description": "Both, on purpose (for example virtual-metrology predictions about real wafers). Every\nquery result is labelled with the origins it touched.",
+          "type": "string"
+        }
+      ]
+    },
+    "Defect": {
+      "description": "One defect, or a count of a class of defects, found on a material unit.",
+      "properties": {
+        "after_run": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "class": {
+          "description": "\"blister\", \"particle\", \"crack\", \"killer\".",
+          "type": "string"
+        },
+        "count": {
+          "default": null,
+          "format": "uint64",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "material": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "position": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MapPosition"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "size": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "material",
+        "class",
+        "method"
+      ],
+      "type": "object"
+    },
+    "Derivation": {
+      "description": "How a derived value was computed.",
+      "properties": {
+        "inputs": {
+          "default": [],
+          "description": "Ids of the records (or names of the quantities) it was computed from.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "method": {
+          "description": "The method, specific enough to reproduce: \"Rs = (π/ln 2)·mean(V/I), collinear 4PP\".",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method"
+      ],
+      "type": "object"
+    },
+    "DieBin": {
+      "description": "One die's bin.",
+      "properties": {
+        "bin": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "die": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "index": {
+          "default": null,
+          "format": "uint64",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "position": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MapPosition"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "bin"
+      ],
+      "type": "object"
+    },
+    "ElectricalTest": {
+      "description": "One electrical test of one structure.",
+      "properties": {
+        "at": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Attribute"
+          },
+          "type": "array"
+        },
+        "bias": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Bias"
+          },
+          "type": "array"
+        },
+        "curves": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Curve"
+          },
+          "type": "array"
+        },
+        "extracted": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Extracted"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "instrument": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "material": {
+          "type": "string"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "structure": {
+          "description": "\"NMOS W/L\", \"collinear 4-point probe\", \"MOS capacitor\".",
+          "type": "string"
+        },
+        "structure_params": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "material",
+        "structure"
+      ],
+      "type": "object"
+    },
+    "Estimate": {
+      "description": "A model estimate about some material: a defect-density posterior, a fitted parameter.\nIts quantity must carry a derivation.",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuantityKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "parameter": {
+          "type": "string"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "scope": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "scope",
+        "parameter",
+        "quantity"
+      ],
+      "type": "object"
+    },
+    "Extracted": {
+      "description": "An extracted parameter. Its quantity must carry a derivation: extraction is a method.",
+      "properties": {
+        "kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuantityKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "name": {
+          "type": "string"
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "name",
+        "quantity"
+      ],
+      "type": "object"
+    },
+    "GenealogyEvent": {
+      "description": "A change to the hierarchy itself.",
+      "properties": {
+        "at": {
+          "default": null,
+          "description": "RFC 3339 time.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "inputs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "op": {
+          "$ref": "#/$defs/GenealogyOp"
+        },
+        "outputs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "reason": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "op"
+      ],
+      "type": "object"
+    },
+    "GenealogyOp": {
+      "oneOf": [
+        {
+          "const": "create",
+          "description": "New material enters the fab (`outputs` only).",
+          "type": "string"
+        },
+        {
+          "const": "split",
+          "description": "One unit becomes several: lot split, wafer cleaved into chips.",
+          "type": "string"
+        },
+        {
+          "const": "merge",
+          "description": "Several units become one: lot merge.",
+          "type": "string"
+        },
+        {
+          "const": "rework",
+          "description": "A step is redone on the same material; `run` names the run being redone.",
+          "type": "string"
+        },
+        {
+          "const": "scrap",
+          "description": "Material leaves the fab (`inputs` only).",
+          "type": "string"
+        }
+      ]
+    },
+    "Header": {
+      "properties": {
+        "created": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dataset_id": {
+          "type": "string"
+        },
+        "declared_origin": {
+          "$ref": "#/$defs/DeclaredOrigin"
+        },
+        "description": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schema": {
+          "type": "string"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "schema_version",
+        "dataset_id",
+        "title",
+        "declared_origin"
+      ],
+      "type": "object"
+    },
+    "License": {
+      "description": "The licence a record may be redistributed under. Required on every record.",
+      "properties": {
+        "attribution": {
+          "default": null,
+          "description": "The attribution the licence requires.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "spdx": {
+          "description": "An SPDX licence expression (`CC-BY-4.0`, `CC0-1.0`, `CC-BY-SA-4.0 AND CERN-OHL-S-2.0`).\n`NOASSERTION` records that the licence is unknown: such records validate but are not\nredistributable and are dropped by `export --redistributable-only`.",
+          "type": "string"
+        },
+        "url": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "spdx"
+      ],
+      "type": "object"
+    },
+    "MapPosition": {
+      "description": "Position in a parent's map, after SEMI E142's substrate map (die index and coordinates).",
+      "properties": {
+        "origin": {
+          "default": null,
+          "description": "Where (0, 0) is: \"center\", \"lower_left\", \"notch_down_lower_left\" (E142 OriginLocation).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "x": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "x_index": {
+          "default": null,
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "y": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quantity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "y_index": {
+          "default": null,
+          "format": "int64",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "MaterialUnit": {
+      "description": "One piece of material at one level of the hierarchy.",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/UnitKind"
+        },
+        "label": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "parent": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "position": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MapPosition"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "site": {
+          "default": null,
+          "description": "The fab site that holds it.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "substrate": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Substrate"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "kind"
+      ],
+      "type": "object"
+    },
+    "MetroPoint": {
+      "description": "One measured value at one place.",
+      "properties": {
+        "position": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MapPosition"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "site": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "type": "object"
+    },
+    "Metrology": {
+      "description": "A measurement of one parameter on one material unit, at one or more sites.",
+      "properties": {
+        "after_run": {
+          "default": null,
+          "description": "The process run whose result this measures.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "at": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Attribute"
+          },
+          "type": "array"
+        },
+        "conditions": {
+          "default": [],
+          "description": "Measurement conditions: model assumptions (n = 1.6), temperature, probe spacing.",
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuantityKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "material": {
+          "type": "string"
+        },
+        "method": {
+          "description": "\"XRR\", \"reflectometry\", \"profilometer\", \"QCM\", \"CD-SEM\", \"AFM\", \"4PP\", \"virtual metrology\".",
+          "type": "string"
+        },
+        "parameter": {
+          "type": "string"
+        },
+        "points": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/MetroPoint"
+          },
+          "type": "array"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "tool": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "material",
+        "method",
+        "parameter"
+      ],
+      "type": "object"
+    },
+    "Observation": {
+      "description": "A qualitative result: an inspection grade, a yes/no. Not a quantity, and never coerced to one.",
+      "properties": {
+        "after_run": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "material": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "scale": {
+          "default": null,
+          "description": "The value's scale: \"1 (worst) to 5 (best)\", \"Y/N\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "material",
+        "method",
+        "name",
+        "value"
+      ],
+      "type": "object"
+    },
+    "Origin": {
+      "description": "Where a record's content came from. The schema's central physics rule: SIMULATED and\nMEASURED records never mix silently (see [`super::validate`]).",
+      "oneOf": [
+        {
+          "const": "MEASURED",
+          "description": "Read from an instrument on real material.",
+          "type": "string"
+        },
+        {
+          "const": "SIMULATED",
+          "description": "Produced by a model or simulator. No physical material is involved.",
+          "type": "string"
+        },
+        {
+          "const": "SPECIFIED",
+          "description": "Written down by a person as an intention: a recipe, a traveler, a setpoint table.",
+          "type": "string"
+        }
+      ]
+    },
+    "Parameter": {
+      "description": "A named quantity with a declared kind. The kind fixes the dimension of the unit.",
+      "properties": {
+        "kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuantityKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "name": {
+          "type": "string"
+        },
+        "quantity": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "name",
+        "quantity"
+      ],
+      "type": "object"
+    },
+    "ProcessRun": {
+      "description": "One execution of a step on a tool.",
+      "properties": {
+        "actuals": {
+          "default": [],
+          "description": "Values the tool reported for this run.",
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          },
+          "type": "array"
+        },
+        "attributes": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Attribute"
+          },
+          "type": "array"
+        },
+        "chamber": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "material": {
+          "default": [],
+          "description": "Material units processed together in this run.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "operator_role": {
+          "default": null,
+          "description": "The operator's role (\"student\", \"technician\", \"automation\"), never a name.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "recipe": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "route": {
+          "default": null,
+          "description": "The flow or traveler the step belongs to.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settings": {
+          "default": [],
+          "description": "As-run setpoints that complete or override the recipe.",
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          },
+          "type": "array"
+        },
+        "start": {
+          "default": null,
+          "description": "RFC 3339 start and end.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "$ref": "#/$defs/RunStatus"
+        },
+        "step_name": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "step_no": {
+          "default": null,
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "tool": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "tool",
+        "status"
+      ],
+      "type": "object"
+    },
+    "Provenance": {
+      "description": "Where one record came from. Required on every record.",
+      "properties": {
+        "locator": {
+          "default": null,
+          "description": "Where inside the source: a row, a table, a line range, a cell.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin"
+        },
+        "produced_by": {
+          "description": "The adapter or program that produced this record, with its version.",
+          "type": "string"
+        },
+        "retrieved": {
+          "default": null,
+          "description": "Date the source was retrieved, `YYYY-MM-DD`.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "description": "A URL, a path relative to the dataset, or a tool identifier.",
+          "type": "string"
+        },
+        "source_version": {
+          "default": null,
+          "description": "The exact version of the source: a git commit, a file SHA-256, a software version.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "origin",
+        "source",
+        "produced_by"
+      ],
+      "type": "object"
+    },
+    "Quantity": {
+      "description": "A number with its unit, its uncertainty and, if derived, its method.",
+      "properties": {
+        "derivation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Derivation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Present exactly when the value was computed from other values."
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Uncertainty"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Required on every measured or derived value; [`Uncertainty::Setpoint`] on setpoints."
+        },
+        "unit": {
+          "default": null,
+          "description": "Unit symbol (see `units::parse`). Required.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "type": "object"
+    },
+    "QuantityKind": {
+      "description": "The physical kind of a quantity. A declared kind fixes the dimension its unit must have.",
+      "oneOf": [
+        {
+          "enum": [
+            "length",
+            "area",
+            "time",
+            "temperature",
+            "pressure",
+            "power",
+            "voltage",
+            "current",
+            "resistance",
+            "resistivity",
+            "capacitance",
+            "frequency",
+            "energy",
+            "angle",
+            "transconductance",
+            "mass",
+            "volume",
+            "concentration"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "sheet_resistance",
+          "description": "Ω per square. Dimensionally a resistance; kept apart so it cannot be joined to one.",
+          "type": "string"
+        },
+        {
+          "const": "rotation_rate",
+          "description": "rpm or rad/s.",
+          "type": "string"
+        },
+        {
+          "const": "gas_flow",
+          "description": "sccm, slm.",
+          "type": "string"
+        },
+        {
+          "const": "rate",
+          "description": "Length per time: deposition and etch rates.",
+          "type": "string"
+        },
+        {
+          "const": "areal_density",
+          "description": "Per area: defect density.",
+          "type": "string"
+        },
+        {
+          "const": "fraction",
+          "description": "Volume or mass fraction, %, ratio.",
+          "type": "string"
+        },
+        {
+          "const": "counts",
+          "description": "Detector counts (OES, XPS).",
+          "type": "string"
+        },
+        {
+          "const": "dimensionless",
+          "description": "Pure number: VSWR, ratios, indices.",
+          "type": "string"
+        }
+      ]
+    },
+    "Recipe": {
+      "description": "A versioned recipe: parameters are setpoints with units.",
+      "properties": {
+        "attributes": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Attribute"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "name": {
+          "type": "string"
+        },
+        "parameters": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          },
+          "type": "array"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "step_kind": {
+          "default": null,
+          "description": "\"rf_sputter\", \"plasma_etch\", \"spin_coat\", \"bake\", \"diffusion\", \"wet_etch\", \"litho_expose\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "supersedes": {
+          "default": null,
+          "description": "The recipe id this version replaces.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tool_class": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "version"
+      ],
+      "type": "object"
+    },
+    "RunStatus": {
+      "enum": [
+        "completed",
+        "aborted",
+        "faulted",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "SampleFlag": {
+      "description": "A flag on one sample of a trace.",
+      "properties": {
+        "code": {
+          "description": "\"physically_impossible\", \"missing\", \"saturated\".",
+          "type": "string"
+        },
+        "index": {
+          "format": "uint64",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "index",
+        "code"
+      ],
+      "type": "object"
+    },
+    "Substrate": {
+      "description": "The starting material of a wafer or substrate.",
+      "properties": {
+        "dopant_type": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "material": {
+          "description": "\"Si\", \"glass\", \"SOI\".",
+          "type": "string"
+        },
+        "orientation": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "properties": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Parameter"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "material"
+      ],
+      "type": "object"
+    },
+    "Summary": {
+      "description": "A population statistic published without its members: \"Vth = 1.40 ± 0.64 V over 5 devices\".\n`sd` is the spread of the population, not the uncertainty of the mean.",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuantityKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "max": {
+          "default": null,
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "mean": {
+          "format": "double",
+          "type": "number"
+        },
+        "median": {
+          "default": null,
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "members": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "method": {
+          "default": null,
+          "description": "How each member value was obtained (the extraction method). Required.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "min": {
+          "default": null,
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "n": {
+          "format": "uint64",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "parameter": {
+          "type": "string"
+        },
+        "population": {
+          "description": "Which members: \"NMOS 1 (L = 5 µm), functional devices\".",
+          "type": "string"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "scope": {
+          "description": "The material unit the population lives on.",
+          "type": "string"
+        },
+        "sd": {
+          "default": null,
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "scope",
+        "population",
+        "parameter",
+        "n",
+        "mean"
+      ],
+      "type": "object"
+    },
+    "Trace": {
+      "description": "One sensor's time series during one run.",
+      "properties": {
+        "calibration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Calibration"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "flags": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SampleFlag"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuantityKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "run": {
+          "type": "string"
+        },
+        "sample_rate_hz": {
+          "default": null,
+          "description": "Uniform sampling rate. Exactly one of `sample_rate_hz` and `times_s` is given.",
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sensor": {
+          "type": "string"
+        },
+        "t0": {
+          "default": null,
+          "description": "RFC 3339 time of the first sample.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "times_s": {
+          "default": [],
+          "description": "Sample times in seconds from `t0`, for irregular sampling.",
+          "items": {
+            "format": "double",
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "tool": {
+          "type": "string"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Uncertainty"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "unit": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "values": {
+          "default": [],
+          "description": "Sample values in `unit`. `null` is a missing sample.",
+          "items": {
+            "format": "double",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "run",
+        "tool",
+        "sensor"
+      ],
+      "type": "object"
+    },
+    "Uncertainty": {
+      "description": "Uncertainty of a quantity, in the quantity's own unit.",
+      "oneOf": [
+        {
+          "description": "Standard uncertainty `u` (coverage factor k = 1).",
+          "properties": {
+            "basis": {
+              "default": null,
+              "description": "How `u` was obtained: \"type A, n = 25 repeats\", \"instrument spec\", \"model posterior s.d.\".",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "kind": {
+              "const": "standard",
+              "type": "string"
+            },
+            "u": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "kind",
+            "u"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Expanded uncertainty `U = k·u`.",
+          "properties": {
+            "basis": {
+              "default": null,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "k": {
+              "format": "double",
+              "type": "number"
+            },
+            "kind": {
+              "const": "expanded",
+              "type": "string"
+            },
+            "u": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "kind",
+            "u",
+            "k"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "The uncertainty is not known. The reason is required.",
+          "properties": {
+            "kind": {
+              "const": "unknown",
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "reason"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "The value is a setpoint or a commanded value, not a measurement.",
+          "properties": {
+            "kind": {
+              "const": "setpoint",
+              "type": "string"
+            },
+            "tolerance": {
+              "default": null,
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "UnitKind": {
+      "description": "Levels of the material hierarchy.",
+      "oneOf": [
+        {
+          "enum": [
+            "lot",
+            "wafer",
+            "chip",
+            "die"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "substrate",
+          "description": "A piece that is not a wafer: a cleaved chip, a glass slide, a coupon.",
+          "type": "string"
+        },
+        {
+          "const": "test_site",
+          "description": "A test structure or measurement location on a die or chip.",
+          "type": "string"
+        }
+      ]
+    },
+    "YieldRecord": {
+      "description": "A pass count at one stage.",
+      "properties": {
+        "criterion": {
+          "description": "What counted as a pass.",
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/License"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "passed": {
+          "format": "uint64",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Provenance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "scope": {
+          "type": "string"
+        },
+        "stage": {
+          "description": "\"visual\", \"electrical\", \"sort\", \"parametric\".",
+          "type": "string"
+        },
+        "tested": {
+          "format": "uint64",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "scope",
+        "stage",
+        "criterion",
+        "tested",
+        "passed"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A complete dataset: a header and thirteen tables.",
+  "properties": {
+    "bin_maps": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/BinMap"
+      },
+      "type": "array"
+    },
+    "defects": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Defect"
+      },
+      "type": "array"
+    },
+    "electrical": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ElectricalTest"
+      },
+      "type": "array"
+    },
+    "estimates": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Estimate"
+      },
+      "type": "array"
+    },
+    "events": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/GenealogyEvent"
+      },
+      "type": "array"
+    },
+    "header": {
+      "$ref": "#/$defs/Header"
+    },
+    "metrology": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Metrology"
+      },
+      "type": "array"
+    },
+    "observations": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Observation"
+      },
+      "type": "array"
+    },
+    "recipes": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Recipe"
+      },
+      "type": "array"
+    },
+    "runs": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ProcessRun"
+      },
+      "type": "array"
+    },
+    "summaries": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Summary"
+      },
+      "type": "array"
+    },
+    "traces": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Trace"
+      },
+      "type": "array"
+    },
+    "units": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/MaterialUnit"
+      },
+      "type": "array"
+    },
+    "yields": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/YieldRecord"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "header"
+  ],
+  "title": "Dataset",
+  "type": "object"
+}

@@ -1,0 +1,1412 @@
+{
+  "schema": "openwafer-genealogy",
+  "schema_version": "0.1.0",
+  "dataset_id": "owg-sim-cell-20261106",
+  "format": "csv",
+  "null": "an empty unquoted field; every string is quoted",
+  "tables": [
+    {
+      "name": "header",
+      "file": "header.csv",
+      "rows": 1,
+      "sha256": "636201536d1714569090edbc08658844a75951129a5d8003bbad23b1d9ab7a89",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "dataset_id",
+          "dtype": "str"
+        },
+        {
+          "name": "declared_origin",
+          "dtype": "str"
+        },
+        {
+          "name": "description",
+          "dtype": "str"
+        },
+        {
+          "name": "schema",
+          "dtype": "str"
+        },
+        {
+          "name": "schema_version",
+          "dtype": "str"
+        },
+        {
+          "name": "title",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "units",
+      "file": "units.csv",
+      "rows": 120,
+      "sha256": "6324c91737438b6944173a13cd9bedb2329f36c33242422dc8bd9784fae6285c",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "label",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "site",
+          "dtype": "str"
+        },
+        {
+          "name": "parent",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "events",
+      "file": "events.csv",
+      "rows": 20,
+      "sha256": "72b9be7b315eb49310f8fd1261932a0d7fb183c66054ce796bd6441d3152bac4",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "at",
+          "dtype": "str"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "inputs#len",
+          "dtype": "int"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "op",
+          "dtype": "str"
+        },
+        {
+          "name": "outputs#len",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "reason",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "events.inputs",
+      "file": "events.inputs.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "events.outputs",
+      "file": "events.outputs.csv",
+      "rows": 120,
+      "sha256": "43375d260058792afca3b5d8cd4fe051594d096c015fb9d078f10cb90e3cfa53",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "recipes",
+      "file": "recipes.csv",
+      "rows": 1,
+      "sha256": "2cea0009a4c6d697ad3f3accb65bd231c111bd99c0046149194e234ebd6f85b4",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "attributes#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "parameters#len",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "step_kind",
+          "dtype": "str"
+        },
+        {
+          "name": "tool_class",
+          "dtype": "str"
+        },
+        {
+          "name": "version",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "recipes.attributes",
+      "file": "recipes.attributes.csv",
+      "rows": 1,
+      "sha256": "7021c5728fc2cfc02112977cba84d6931d6b04045bfa992d5ef30371464fd94a",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "recipes.parameters",
+      "file": "recipes.parameters.csv",
+      "rows": 3,
+      "sha256": "2d54e2581dfa89c2cd18c7d83621458c5e14656913f3656abcb82097d2b3f177",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.value",
+          "dtype": "float"
+        }
+      ],
+      "units": {
+        "quantity.value": [
+          "nm",
+          "s"
+        ]
+      }
+    },
+    {
+      "name": "runs",
+      "file": "runs.csv",
+      "rows": 100,
+      "sha256": "4a59b4cf167fc9772d71ea0e2cfe4bea1702ce5b8e612c86ffa013c4498f1387",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "actuals#len",
+          "dtype": "int"
+        },
+        {
+          "name": "attributes#len",
+          "dtype": "int"
+        },
+        {
+          "name": "end",
+          "dtype": "str"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "material#len",
+          "dtype": "int"
+        },
+        {
+          "name": "operator_role",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "recipe",
+          "dtype": "str"
+        },
+        {
+          "name": "route",
+          "dtype": "str"
+        },
+        {
+          "name": "settings#len",
+          "dtype": "int"
+        },
+        {
+          "name": "start",
+          "dtype": "str"
+        },
+        {
+          "name": "status",
+          "dtype": "str"
+        },
+        {
+          "name": "step_name",
+          "dtype": "str"
+        },
+        {
+          "name": "step_no",
+          "dtype": "int"
+        },
+        {
+          "name": "tool",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "runs.actuals",
+      "file": "runs.actuals.csv",
+      "rows": 100,
+      "sha256": "9fb4355b5bb9fb022d60acabc4d0115b8a3203fde655e31bb8839a3e7f7688b6",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.basis",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.u",
+          "dtype": "float"
+        },
+        {
+          "name": "quantity.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.value",
+          "dtype": "float"
+        }
+      ],
+      "units": {
+        "quantity.value": [
+          "s"
+        ]
+      }
+    },
+    {
+      "name": "runs.attributes",
+      "file": "runs.attributes.csv",
+      "rows": 300,
+      "sha256": "dc602974c647dbe0f413800dd7373e57385158f91e13c97547309e04672661bc",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "runs.material",
+      "file": "runs.material.csv",
+      "rows": 100,
+      "sha256": "190225743a9030deea9a111c42c5299ac7c91f4d81d53fab9055adbe62cf3b7a",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "runs.settings",
+      "file": "runs.settings.csv",
+      "rows": 100,
+      "sha256": "ad04e99c5c4485a9a94a20fd582439302f223fb613af40ad46df84171a483bc3",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.value",
+          "dtype": "float"
+        }
+      ],
+      "units": {
+        "quantity.value": [
+          "s"
+        ]
+      }
+    },
+    {
+      "name": "traces",
+      "file": "traces.csv",
+      "rows": 400,
+      "sha256": "4138d2dae70a2d44860c6f9eb6c10b1fb7ec580a4a04dcf759f28c1f6e143fe0",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "calibration.reference",
+          "dtype": "str"
+        },
+        {
+          "name": "calibration.status",
+          "dtype": "str"
+        },
+        {
+          "name": "flags#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "run",
+          "dtype": "str"
+        },
+        {
+          "name": "sample_rate_hz",
+          "dtype": "float"
+        },
+        {
+          "name": "sensor",
+          "dtype": "str"
+        },
+        {
+          "name": "t0",
+          "dtype": "str"
+        },
+        {
+          "name": "times_s#len",
+          "dtype": "int"
+        },
+        {
+          "name": "tool",
+          "dtype": "str"
+        },
+        {
+          "name": "uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "uncertainty.reason",
+          "dtype": "str"
+        },
+        {
+          "name": "unit",
+          "dtype": "str"
+        },
+        {
+          "name": "values#len",
+          "dtype": "int"
+        },
+        {
+          "name": "uncertainty.basis",
+          "dtype": "str"
+        },
+        {
+          "name": "uncertainty.u",
+          "dtype": "float"
+        }
+      ],
+      "units": {
+        "unit": [
+          "V",
+          "counts",
+          "degC",
+          "mTorr"
+        ]
+      }
+    },
+    {
+      "name": "traces.flags",
+      "file": "traces.flags.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "traces.times_s",
+      "file": "traces.times_s.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "traces.values",
+      "file": "traces.values.csv",
+      "rows": 7668,
+      "sha256": "adc7584c371d8f156f155efd0ea9d73b3a610faef9b60ce918042aa039c74da4",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "float"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "metrology",
+      "file": "metrology.csv",
+      "rows": 43,
+      "sha256": "2067505aca238a404aab7fdb9e3302fa5c151eb98e4b2c8c19fcd230f3256489",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "after_run",
+          "dtype": "str"
+        },
+        {
+          "name": "attributes#len",
+          "dtype": "int"
+        },
+        {
+          "name": "conditions#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "material",
+          "dtype": "str"
+        },
+        {
+          "name": "method",
+          "dtype": "str"
+        },
+        {
+          "name": "parameter",
+          "dtype": "str"
+        },
+        {
+          "name": "points#len",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "tool",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "metrology.attributes",
+      "file": "metrology.attributes.csv",
+      "rows": 34,
+      "sha256": "0f5d0529f902a648ce207e5e7c5b3226768e963cebbac0fb91d52cee04142103",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "metrology.conditions",
+      "file": "metrology.conditions.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "metrology.points",
+      "file": "metrology.points.csv",
+      "rows": 43,
+      "sha256": "eb87d0cc611ebce42b0824b73fb55021ea65b18e4027d54637215f8a2ca32690",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value.uncertainty.basis",
+          "dtype": "str"
+        },
+        {
+          "name": "value.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "value.uncertainty.u",
+          "dtype": "float"
+        },
+        {
+          "name": "value.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "value.value",
+          "dtype": "float"
+        },
+        {
+          "name": "value.derivation.inputs#len",
+          "dtype": "int"
+        },
+        {
+          "name": "value.derivation.method",
+          "dtype": "str"
+        }
+      ],
+      "units": {
+        "value.value": [
+          "nm"
+        ]
+      }
+    },
+    {
+      "name": "metrology.points.value.derivation.inputs",
+      "file": "metrology.points.value.derivation.inputs.csv",
+      "rows": 68,
+      "sha256": "54e6f576769cfb55458d017ef4705e5feb8a9d076da8eb97581065e060794694",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "electrical",
+      "file": "electrical.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "summaries",
+      "file": "summaries.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "yields",
+      "file": "yields.csv",
+      "rows": 100,
+      "sha256": "1f2feca1581cd884029aebd89d0118d2850c7aa77f8cd991e01cf542d7d22cea",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "criterion",
+          "dtype": "str"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "passed",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "scope",
+          "dtype": "str"
+        },
+        {
+          "name": "stage",
+          "dtype": "str"
+        },
+        {
+          "name": "tested",
+          "dtype": "int"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "defects",
+      "file": "defects.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "bin_maps",
+      "file": "bin_maps.csv",
+      "rows": 100,
+      "sha256": "cda95e2e1d8f18764beeeffebe3a68d47bdaf76dd675aa8f6f3ac657e79de652",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "after_run",
+          "dtype": "str"
+        },
+        {
+          "name": "bin_defs#len",
+          "dtype": "int"
+        },
+        {
+          "name": "dies#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "material",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "bin_maps.bin_defs",
+      "file": "bin_maps.bin_defs.csv",
+      "rows": 300,
+      "sha256": "c85ddd63a0570d5837358c06c36749fef8113270381588bd0827b80d235f3f0c",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "code",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "pass",
+          "dtype": "bool"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "bin_maps.dies",
+      "file": "bin_maps.dies.csv",
+      "rows": 10000,
+      "sha256": "8902e0b509b75b94c1a1f2dc5ec23df983e50ab1cf399917e35504cf3bfe9b9e",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "bin",
+          "dtype": "int"
+        },
+        {
+          "name": "index",
+          "dtype": "int"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "observations",
+      "file": "observations.csv",
+      "rows": 57,
+      "sha256": "99995d0c96c4dfb80311e0e9aa4927b461c0e395c01497338bf566a7b035d359",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "after_run",
+          "dtype": "str"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "material",
+          "dtype": "str"
+        },
+        {
+          "name": "method",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "scale",
+          "dtype": "str"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "estimates",
+      "file": "estimates.csv",
+      "rows": 101,
+      "sha256": "a1d8eecf4f06212d345cf49b05ba129d31de5de6a0f55fefd926872f3f3bc831",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "parameter",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.derivation.inputs#len",
+          "dtype": "int"
+        },
+        {
+          "name": "quantity.derivation.method",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.basis",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.u",
+          "dtype": "float"
+        },
+        {
+          "name": "quantity.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.value",
+          "dtype": "float"
+        },
+        {
+          "name": "scope#len",
+          "dtype": "int"
+        }
+      ],
+      "units": {
+        "quantity.value": [
+          "cm-2",
+          "nm"
+        ]
+      }
+    },
+    {
+      "name": "estimates.quantity.derivation.inputs",
+      "file": "estimates.quantity.derivation.inputs.csv",
+      "rows": 200,
+      "sha256": "97caa56eabe4b9766402bf1c5b6e56c4e50cefa0d30800e22512ad236f7c4ac1",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "estimates.scope",
+      "file": "estimates.scope.csv",
+      "rows": 120,
+      "sha256": "e9e511a2d383d600bf28052cbd88c4cb101d522785701012eb1ec074efe91432",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    }
+  ]
+}

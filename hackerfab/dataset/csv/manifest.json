@@ -1,0 +1,1353 @@
+{
+  "schema": "openwafer-genealogy",
+  "schema_version": "0.1.0",
+  "dataset_id": "owg-hackerfab-public-2026-11-15",
+  "format": "csv",
+  "null": "an empty unquoted field; every string is quoted",
+  "tables": [
+    {
+      "name": "header",
+      "file": "header.csv",
+      "rows": 1,
+      "sha256": "471719ea1d3e8956755eaad2cfaa8065d7aa34fbb98274d863d14f6156aff4d8",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "dataset_id",
+          "dtype": "str"
+        },
+        {
+          "name": "declared_origin",
+          "dtype": "str"
+        },
+        {
+          "name": "description",
+          "dtype": "str"
+        },
+        {
+          "name": "schema",
+          "dtype": "str"
+        },
+        {
+          "name": "schema_version",
+          "dtype": "str"
+        },
+        {
+          "name": "title",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "units",
+      "file": "units.csv",
+      "rows": 16,
+      "sha256": "a86451c1cad105a4633248ae9dba27221b4f18210cd8c06954999b8113af4d10",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "site",
+          "dtype": "str"
+        },
+        {
+          "name": "substrate.material",
+          "dtype": "str"
+        },
+        {
+          "name": "substrate.properties#len",
+          "dtype": "int"
+        },
+        {
+          "name": "label",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.retrieved",
+          "dtype": "str"
+        },
+        {
+          "name": "parent",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "units.substrate.properties",
+      "file": "units.substrate.properties.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "events",
+      "file": "events.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "recipes",
+      "file": "recipes.csv",
+      "rows": 63,
+      "sha256": "07af7dbca826ff4d96916e1ffccac6b007976cc25a02928e73c640b7547edb9f",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "attributes#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "parameters#len",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "step_kind",
+          "dtype": "str"
+        },
+        {
+          "name": "tool_class",
+          "dtype": "str"
+        },
+        {
+          "name": "version",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.retrieved",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "recipes.attributes",
+      "file": "recipes.attributes.csv",
+      "rows": 81,
+      "sha256": "98f0356795cede0dd90f3de9adb8df85b42b6fcc84358e2e6ef9c7ee40f78e6c",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "recipes.parameters",
+      "file": "recipes.parameters.csv",
+      "rows": 148,
+      "sha256": "035939dbca63d68479f478188f895a6d6881bd9aaddbcb3ddf4376aece1d6d56",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.value",
+          "dtype": "float"
+        }
+      ],
+      "units": {
+        "quantity.value": [
+          "1",
+          "Torr",
+          "W",
+          "angstrom/s",
+          "degC",
+          "hPa",
+          "in",
+          "min",
+          "nm",
+          "rpm",
+          "s",
+          "sccm",
+          "um"
+        ]
+      }
+    },
+    {
+      "name": "runs",
+      "file": "runs.csv",
+      "rows": 12,
+      "sha256": "63a92e8d4750161e89f3777c195f5389ab6fb8ad31ab67cbdfbecdddf93a6a29",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "actuals#len",
+          "dtype": "int"
+        },
+        {
+          "name": "attributes#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "material#len",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "recipe",
+          "dtype": "str"
+        },
+        {
+          "name": "settings#len",
+          "dtype": "int"
+        },
+        {
+          "name": "status",
+          "dtype": "str"
+        },
+        {
+          "name": "step_name",
+          "dtype": "str"
+        },
+        {
+          "name": "tool",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.retrieved",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "runs.actuals",
+      "file": "runs.actuals.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "runs.attributes",
+      "file": "runs.attributes.csv",
+      "rows": 2,
+      "sha256": "adaed8c1bb9d302cfce4e59067553d0f0523b6604571090439a5d30c23273cd0",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "runs.material",
+      "file": "runs.material.csv",
+      "rows": 11,
+      "sha256": "1c2ef137ece654762cc182ed3cde240fe6c7f00d3edcb3aad97695057e7d5903",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "runs.settings",
+      "file": "runs.settings.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "traces",
+      "file": "traces.csv",
+      "rows": 1,
+      "sha256": "7539af94904ef682fa3df250bd4113d6d9c0f6b1cb90cddf9688c24f6d7b0da4",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "calibration.status",
+          "dtype": "str"
+        },
+        {
+          "name": "flags#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.retrieved",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "run",
+          "dtype": "str"
+        },
+        {
+          "name": "sensor",
+          "dtype": "str"
+        },
+        {
+          "name": "times_s#len",
+          "dtype": "int"
+        },
+        {
+          "name": "tool",
+          "dtype": "str"
+        },
+        {
+          "name": "uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "uncertainty.reason",
+          "dtype": "str"
+        },
+        {
+          "name": "unit",
+          "dtype": "str"
+        },
+        {
+          "name": "values#len",
+          "dtype": "int"
+        }
+      ],
+      "units": {
+        "unit": [
+          "Torr"
+        ]
+      }
+    },
+    {
+      "name": "traces.flags",
+      "file": "traces.flags.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "traces.times_s",
+      "file": "traces.times_s.csv",
+      "rows": 1129,
+      "sha256": "930534d4ff464a2c47b4d9735ec8481e9f5f0416d0964bf222caf6d484bbf209",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "float"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "traces.values",
+      "file": "traces.values.csv",
+      "rows": 1129,
+      "sha256": "4da71ad023a7d1be0f3412f2df4b46b8d85126f8219b1fa2286650b64675d3c3",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "float"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "metrology",
+      "file": "metrology.csv",
+      "rows": 10,
+      "sha256": "60315845f48bfd020873158656e6948857b08b3714aa592c05fcbf201ec9e173",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "after_run",
+          "dtype": "str"
+        },
+        {
+          "name": "attributes#len",
+          "dtype": "int"
+        },
+        {
+          "name": "conditions#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "material",
+          "dtype": "str"
+        },
+        {
+          "name": "method",
+          "dtype": "str"
+        },
+        {
+          "name": "parameter",
+          "dtype": "str"
+        },
+        {
+          "name": "points#len",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.note",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "metrology.attributes",
+      "file": "metrology.attributes.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "metrology.conditions",
+      "file": "metrology.conditions.csv",
+      "rows": 1,
+      "sha256": "872d5a2a03a4ce07e06faff1f42c2f8b19773ed3205188a4432a9d4504bb60fd",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.value",
+          "dtype": "float"
+        }
+      ],
+      "units": {
+        "quantity.value": [
+          "1"
+        ]
+      }
+    },
+    {
+      "name": "metrology.points",
+      "file": "metrology.points.csv",
+      "rows": 10,
+      "sha256": "8b726e0342cb227e71d18a66d542a8e02cd70eb10c146d4faa6e0368f0e5515a",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value.uncertainty.basis",
+          "dtype": "str"
+        },
+        {
+          "name": "value.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "value.uncertainty.u",
+          "dtype": "float"
+        },
+        {
+          "name": "value.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "value.value",
+          "dtype": "float"
+        },
+        {
+          "name": "value.uncertainty.reason",
+          "dtype": "str"
+        }
+      ],
+      "units": {
+        "value.value": [
+          "nm"
+        ]
+      }
+    },
+    {
+      "name": "electrical",
+      "file": "electrical.csv",
+      "rows": 1,
+      "sha256": "d3038abe76e35d2905004b125b9da4f14666a7c0d874be00652ec475b8cf0fb6",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "at",
+          "dtype": "str"
+        },
+        {
+          "name": "attributes#len",
+          "dtype": "int"
+        },
+        {
+          "name": "bias#len",
+          "dtype": "int"
+        },
+        {
+          "name": "curves#len",
+          "dtype": "int"
+        },
+        {
+          "name": "extracted#len",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "instrument",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "material",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.retrieved",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "structure",
+          "dtype": "str"
+        },
+        {
+          "name": "structure_params#len",
+          "dtype": "int"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "electrical.attributes",
+      "file": "electrical.attributes.csv",
+      "rows": 2,
+      "sha256": "b1a73dbe59cf16896a2a87fad1b9eb05ad93899df5d0f921a1e53e5b44ff13b9",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "electrical.bias",
+      "file": "electrical.bias.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "electrical.curves",
+      "file": "electrical.curves.csv",
+      "rows": 1,
+      "sha256": "67b32934b84ea263c8087a6d33d95d1cfd91f18d2f5ed8922bba3c50b0f681f3",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "fixed#len",
+          "dtype": "int"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "uncertainty.reason",
+          "dtype": "str"
+        },
+        {
+          "name": "x.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "x.name",
+          "dtype": "str"
+        },
+        {
+          "name": "x.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "x.values#len",
+          "dtype": "int"
+        },
+        {
+          "name": "y.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "y.name",
+          "dtype": "str"
+        },
+        {
+          "name": "y.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "y.values#len",
+          "dtype": "int"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "electrical.curves.fixed",
+      "file": "electrical.curves.fixed.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "electrical.curves.x.values",
+      "file": "electrical.curves.x.values.csv",
+      "rows": 25,
+      "sha256": "b807dc22c74848156a8e670d3e4d925995c82b055c3a672b7275ab0f74d04fa9",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "float"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "electrical.curves.y.values",
+      "file": "electrical.curves.y.values.csv",
+      "rows": 25,
+      "sha256": "fa25881757d4ac5efa6be2a6194ca1080ace1747b8f33ea3650ad324e4dc70e9",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "float"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "electrical.extracted",
+      "file": "electrical.extracted.csv",
+      "rows": 2,
+      "sha256": "244400bfad593e46393065be4cad543bea2035d73def9131c7b6eff7c92a2165",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "name",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.derivation.inputs#len",
+          "dtype": "int"
+        },
+        {
+          "name": "quantity.derivation.method",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.basis",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.kind",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.uncertainty.u",
+          "dtype": "float"
+        },
+        {
+          "name": "quantity.unit",
+          "dtype": "str"
+        },
+        {
+          "name": "quantity.value",
+          "dtype": "float"
+        },
+        {
+          "name": "quantity.uncertainty.reason",
+          "dtype": "str"
+        }
+      ],
+      "units": {
+        "quantity.value": [
+          "ohm.m",
+          "ohm/sq"
+        ]
+      }
+    },
+    {
+      "name": "electrical.extracted.quantity.derivation.inputs",
+      "file": "electrical.extracted.quantity.derivation.inputs.csv",
+      "rows": 3,
+      "sha256": "fb855706adad1e563e34bb4601915c46529f84dbb281c14c57965e060a7df685",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "_parent",
+          "dtype": "int"
+        },
+        {
+          "name": "_idx",
+          "dtype": "int"
+        },
+        {
+          "name": "value",
+          "dtype": "str"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "electrical.structure_params",
+      "file": "electrical.structure_params.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "summaries",
+      "file": "summaries.csv",
+      "rows": 66,
+      "sha256": "1ea1a3f78897026837f0e7a34b67fa439a3a60f557c11d32290110e36381c215",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "kind",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "mean",
+          "dtype": "float"
+        },
+        {
+          "name": "members#len",
+          "dtype": "int"
+        },
+        {
+          "name": "method",
+          "dtype": "str"
+        },
+        {
+          "name": "n",
+          "dtype": "int"
+        },
+        {
+          "name": "parameter",
+          "dtype": "str"
+        },
+        {
+          "name": "population",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.retrieved",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "scope",
+          "dtype": "str"
+        },
+        {
+          "name": "sd",
+          "dtype": "float"
+        },
+        {
+          "name": "unit",
+          "dtype": "str"
+        }
+      ],
+      "units": {
+        "unit": [
+          "1",
+          "V",
+          "mA",
+          "ohm",
+          "µA"
+        ]
+      }
+    },
+    {
+      "name": "summaries.members",
+      "file": "summaries.members.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "yields",
+      "file": "yields.csv",
+      "rows": 7,
+      "sha256": "fb2ced2970ae78aef332817692b5040e0dded18688df60a7d07150f79d4fb701",
+      "columns": [
+        {
+          "name": "_row",
+          "dtype": "int"
+        },
+        {
+          "name": "criterion",
+          "dtype": "str"
+        },
+        {
+          "name": "id",
+          "dtype": "str"
+        },
+        {
+          "name": "license.attribution",
+          "dtype": "str"
+        },
+        {
+          "name": "license.spdx",
+          "dtype": "str"
+        },
+        {
+          "name": "passed",
+          "dtype": "int"
+        },
+        {
+          "name": "provenance.locator",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.origin",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.produced_by",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.retrieved",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source",
+          "dtype": "str"
+        },
+        {
+          "name": "provenance.source_version",
+          "dtype": "str"
+        },
+        {
+          "name": "scope",
+          "dtype": "str"
+        },
+        {
+          "name": "stage",
+          "dtype": "str"
+        },
+        {
+          "name": "tested",
+          "dtype": "int"
+        }
+      ],
+      "units": {}
+    },
+    {
+      "name": "defects",
+      "file": "defects.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "bin_maps",
+      "file": "bin_maps.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "observations",
+      "file": "observations.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    },
+    {
+      "name": "estimates",
+      "file": "estimates.csv",
+      "rows": 0,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "columns": [],
+      "units": {}
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+"_row","dataset_id","declared_origin","description","schema","schema_version","title"
+0,"owg-sim-cell-20261106","SIMULATED","100 wafers through two simulated etchers under EWMA run-to-run control, with CD-SEM sampling, advisory virtual metrology and per-die sort. All values simulated by openie-fpga.","openwafer-genealogy","0.1.0","Simulated closed etch cell: recipe, runs, traces, metrology, sort"

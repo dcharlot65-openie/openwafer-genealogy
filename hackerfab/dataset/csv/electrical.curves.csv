@@ -1,0 +1,2 @@
+"_row","_parent","_idx","fixed#len","name","uncertainty.kind","uncertainty.reason","x.kind","x.name","x.unit","x.values#len","y.kind","y.name","y.unit","y.values#len"
+0,0,0,0,"V(I)","unknown","the instrument's accuracy is not recorded in the export","current","Source I","A",25,"voltage","Measured V","V",25

@@ -1,0 +1,3 @@
+"_row","_parent","_idx","name","value"
+0,0,0,"export_columns","_Id,_Iteration,_Segment,_Elapsed,_DateTime,Source I (A),Measured V (V),Resistance (Ω)"
+1,0,1,"local_time_first_reading","2026-04-03 12:51:51.109 (time zone not recorded)"

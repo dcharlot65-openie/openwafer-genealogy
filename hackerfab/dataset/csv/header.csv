@@ -1,0 +1,2 @@
+"_row","dataset_id","declared_origin","description","schema","schema_version","title"
+0,"owg-hackerfab-public-2026-11-15","MEASURED","Converted from Hacker Fab's public repositories and documentation (licences per record). Real records; not complete runs: see SOURCES.md for what joins.","openwafer-genealogy","0.1.0","Hacker Fab public records in the openWafer genealogy schema"

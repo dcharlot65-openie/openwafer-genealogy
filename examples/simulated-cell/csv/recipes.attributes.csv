@@ -1,0 +1,2 @@
+"_row","_parent","_idx","name","value"
+0,0,0,"run_to_run_controller","EWMA, lambda = 0.2, model gain -1.1 nm/s, metrology delay 2 runs (ofpga-mes::r2r)"

@@ -1,0 +1,12 @@
+openwafer-genealogy
+Copyright 2026 openWafer, Inc.
+
+The code (src/, tests/) and the schema (schema/, SCHEMA.md) are licensed under the
+Apache License, Version 2.0 (see LICENSE). The simulated example data in
+examples/simulated-cell/ is also Apache-2.0.
+
+hackerfab/raw/ holds files copied from Hacker Fab repositories, and hackerfab/dataset/
+and hackerfab/transcribed/ hold records converted from them. Those files are not
+covered by this repository's licence: each carries the licence of its source
+(CC BY-SA 4.0 or CERN-OHL-S-2.0), recorded per record and in hackerfab/raw/NOTICE.md.
+Attribution: Hacker Fab contributors.

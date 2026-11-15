@@ -1,0 +1,3 @@
+"_row","_parent","_idx","kind","name","quantity.derivation.inputs#len","quantity.derivation.method","quantity.uncertainty.basis","quantity.uncertainty.kind","quantity.uncertainty.u","quantity.unit","quantity.value","quantity.uncertainty.reason"
+0,0,0,"sheet_resistance","sheet_resistance",1,"Rs = (π/ln 2)·mean(V/I), collinear four-point probe on a thin film over an insulating substrate much wider than the probe spacing (no correction factor)","type A: s.d. of the 25 V/I readings / √n, times π/ln 2; probe-spacing and edge corrections not applied","standard",0.00019620710106892152,"ohm/sq",0.22805559105424839,
+1,0,1,"resistivity","resistivity",2,"ρ = Rs · t",,"unknown",,"ohm.m",3.420833865813726e-8,"the film thickness has no stated uncertainty"
